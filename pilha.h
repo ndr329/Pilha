@@ -16,4 +16,13 @@ typedef struct {
     No* topo;
 } Pilha;
 
+// Cria e inicializa uma pilha vazia
+// Entrada: nenhuma
+// Retorno: ponteiro para uma pilha vazia
+// Pré-condição: nenhuma
+// Pós-condição: um pilha vazia é criada
+Pilha* criar_pilha_vazia(void);
+
+
+
 #endif /* pilha_h */
