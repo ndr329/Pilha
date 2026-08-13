@@ -37,11 +37,25 @@ void empilhar(Pilha* p, TipoItem info);
 // Pós-condição: a memória alocada para a pilha é liberada
 void liberar(Pilha* p);
 
+// Verifica se a pilha está vazia
+// Entrada: pilha
+// Retorno: 1 se a pilha estiver vazia ou 0 caso contrário
+// Pré-condição: pilha criada
+// Pós-condição: nenhuma
+int vazia(Pilha* p);
+
 // Lê o topo da pilha sem desempilhar
 // Entrada: pilha
 // Retorno: elemento localizado no topo da pilha
 // Pré-condição: pilha criada
 // Pós-condição: a pilha permanece inalterada
 TipoItem* topo(Pilha* p);
+
+// Remove o elemento que está no topo
+// Entrada: pilha
+// Retorno: elemento removido
+// Pré-condição: pilha criada
+// Pós-condição: o elemento do topo é removido
+TipoItem* desempilhar(Pilha* p);
 
 #endif /* pilha_h */

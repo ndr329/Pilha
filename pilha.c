@@ -86,3 +86,29 @@ TipoItem* topo(Pilha* p) {
         return NULL;
     }
 }
+
+// Remove o elemento que está no topo
+// Entrada: pilha
+// Retorno: elemento removido
+// Pré-condição: pilha criada
+// Pós-condição: o elemento do topo é removido
+TipoItem* desempilhar(Pilha* p) {
+    if(!vazia(p)) {
+        TipoItem* x = malloc(sizeof(TipoItem));
+
+        if(x == NULL) {
+            printf("Erro de alocação de memória.\n");
+            return NULL;
+        }
+
+        No* aux = p->topo;
+        *x = p->topo->info;
+        p->topo = p->topo->prox;
+        free(aux);
+        return x;
+    }
+    else {
+        printf("Pilha vazia.\n");
+        return NULL;
+    }
+}

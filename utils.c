@@ -20,6 +20,7 @@ void menu(void) {
         printf("\nEscolha uma das opções:\n\n");
         printf("1. Inserir um elemento na pilha\n");
         printf("2. Consulta topo da pilha\n");
+        printf("3. Desempilhar elemento\n");
         printf("0. Encerrar programa\n");
         printf("\nOpção: ");
         scanf("%d", &op);
@@ -35,6 +36,14 @@ void menu(void) {
                 aux = topo(p);
                 if(aux != NULL) {
                     printf("O elemento %d está no topo da pilha.\n", *aux);
+                    free(aux);
+                }
+                break;
+
+            case 3:
+                aux = desempilhar(p);
+                if(aux != NULL) {
+                    printf("O elemento %d foi removido do topo da pilha.\n", *aux);
                     free(aux);
                 }
                 break;
