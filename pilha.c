@@ -54,3 +54,35 @@ void liberar(Pilha* p) {
     }
     free(p);
 }
+
+// Verifica se a pilha está vazia
+// Entrada: pilha
+// Retorno: 1 se a pilha estiver vazia ou 0 caso contrário
+// Pré-condição: pilha criada
+// Pós-condição: nenhuma
+int vazia(Pilha* p) {
+    return (p->topo == NULL);
+}
+
+// Lê o topo da pilha sem desempilhar
+// Entrada: pilha
+// Retorno: elemento localizado no topo da pilha
+// Pré-condição: pilha criada
+// Pós-condição: a pilha permanece inalterada
+TipoItem* topo(Pilha* p) {
+    if(!vazia(p)) {
+        TipoItem* x = malloc(sizeof(TipoItem));
+
+        if(x == NULL) {
+            printf("Erro de alocação de memória.\n");
+            return NULL;
+        }
+
+        *x = p->topo->info;
+        return x;
+    }
+    else {
+        printf("Pilha vazia.\n");
+        return NULL;
+    }
+}

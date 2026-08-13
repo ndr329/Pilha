@@ -37,4 +37,11 @@ void empilhar(Pilha* p, TipoItem info);
 // Pós-condição: a memória alocada para a pilha é liberada
 void liberar(Pilha* p);
 
+// Lê o topo da pilha sem desempilhar
+// Entrada: pilha
+// Retorno: elemento localizado no topo da pilha
+// Pré-condição: pilha criada
+// Pós-condição: a pilha permanece inalterada
+TipoItem* topo(Pilha* p);
+
 #endif /* pilha_h */
