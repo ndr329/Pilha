@@ -35,5 +35,22 @@ void empilhar(Pilha* p, TipoItem info) {
     aux->info = info;
     aux->prox = p->topo;
     p->topo = aux;
+    printf("Elemento %d inserido na pilha.\n", p->topo->info);
 }
 
+// Libera a memória ocupada pela pilha
+// Entrada: pilha
+// Retorno: nenhum
+// Pré-condição: pilha criada
+// Pós-condição: a memória alocada para a pilha é liberada
+void liberar(Pilha* p) {
+    No* atual = p->topo;
+    No* proximo;
+
+    while(atual != NULL) {
+        proximo = atual->prox;
+        free(atual);
+        atual = proximo;
+    }
+    free(p);
+}

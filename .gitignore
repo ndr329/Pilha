@@ -1,0 +1,11 @@
+# Executáveis
+*.out
+*.exe
+*.app
+
+# Arquivos objeto
+*.o
+
+# Diretórios de compilação
+build/
+cmake-build-*/
