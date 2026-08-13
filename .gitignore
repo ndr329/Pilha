@@ -2,6 +2,7 @@
 *.out
 *.exe
 *.app
+pilha
 
 # Arquivos objeto
 *.o
