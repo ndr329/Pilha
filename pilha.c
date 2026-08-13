@@ -19,3 +19,21 @@ Pilha* criar_pilha_vazia(void) {
     return aux;
 }
 
+// Insere um novo elemento no topo
+// Entrada: pilha e elemento a ser inserido
+// Retorno: nenhum
+// Pré-condição: pilha criada
+// Pós-condição: o elemento é inserido no topo da pilha
+void empilhar(Pilha* p, TipoItem info) {
+    No* aux = malloc(sizeof(No));
+    
+    if( aux == NULL) {
+        printf("Erro na alocação de memória.\n");
+        return;
+    }
+
+    aux->info = info;
+    aux->prox = p->topo;
+    p->topo = aux;
+}
+

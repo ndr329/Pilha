@@ -23,6 +23,11 @@ typedef struct {
 // Pós-condição: um pilha vazia é criada
 Pilha* criar_pilha_vazia(void);
 
-
+// Insere um novo elemento no topo
+// Entrada: pilha e elemento a ser inserido
+// Retorno: nenhum
+// Pré-condição: pilha criada
+// Pós-condição: o elemento é inserido no topo da pilha
+void empilhar(Pilha* p, TipoItem info);
 
 #endif /* pilha_h */
